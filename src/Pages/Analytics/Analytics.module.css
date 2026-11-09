@@ -1,0 +1,345 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content {
+  padding: 28px 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageTitle h1 {
+  color: var(--dark-titr-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.pageTitle p {
+  color: var(--dark-text-color);
+  font-size: 0.9rem;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpiCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kpiTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark-text-color);
+  font-size: 0.9rem;
+}
+
+.greenIconBox,
+.blueIconBox,
+.redIconBox,
+.purpleIconBox {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.greenIconBox {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.blueIconBox {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #3b82f6;
+}
+
+.redIconBox {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.purpleIconBox {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #a855f7;
+}
+
+.kpiCard h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.9rem;
+  color: var(--dark-titr-color);
+}
+
+.kpiSub {
+  color: var(--dark-text-color);
+  font-size: 0.8rem;
+}
+
+.middleGrid,
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panelCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHeader h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--dark-titr-color);
+}
+
+.titleWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerIcon {
+  color: var(--dark-buttons-color);
+  font-size: 1.1rem;
+}
+
+.badge {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--dark-text-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.donutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.svgWrapper {
+  width: 170px;
+  height: 170px;
+}
+
+.donutSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.legendList {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: var(--bg-input);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.legendLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-text-color);
+}
+
+.greenDot,
+.blueDot,
+.amberDot,
+.purpleDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.greenDot {
+  background-color: #10b981;
+}
+.blueDot {
+  background-color: #3b82f6;
+}
+.amberDot {
+  background-color: #f59e0b;
+}
+.purpleDot {
+  background-color: #a855f7;
+}
+
+.priorityBars,
+.projectRows {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.barGroup,
+.projectRowItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.barLabel,
+.projectRowTop {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--dark-text-color);
+}
+
+.projectRowTop strong {
+  color: var(--dark-titr-color);
+}
+
+.barTrack {
+  width: 100%;
+  height: 8px;
+  background-color: var(--bg-input);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.highFill,
+.mediumFill,
+.lowFill,
+.projectFill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.35s ease;
+}
+
+.highFill {
+  background-color: #ef4444;
+}
+.mediumFill {
+  background-color: #f59e0b;
+}
+.lowFill {
+  background-color: #3b82f6;
+}
+.projectFill {
+  background: linear-gradient(90deg, #6366f1, #22d3ee);
+}
+
+.teamList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.memberRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.memberInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--dark-buttons-color);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memberInfo h4 {
+  color: var(--dark-titr-color);
+  font-size: 0.92rem;
+  margin-bottom: 2px;
+}
+
+.memberInfo span {
+  color: var(--dark-text-color);
+  font-size: 0.8rem;
+}
+
+.memberHours {
+  background-color: rgba(37, 99, 235, 0.15);
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+@media (max-width: 1100px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .middleGrid,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 20px 16px;
+  }
+
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+}

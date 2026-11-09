@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg-main: #0b1120;
+  --bg-card: #151f32;
+  --bg-input: #0f172a;
+  --border-color: #23304a;
+  --dark-titr-color: #ffffff;
+  --dark-text-color: #94a3b8;
+  --dark-buttons-color: #2563eb;
+  --green-badge: #10b981;
+  --high-priority: #ef4444;
+  --medium-priority: #f59e0b;
+  --low-priority: #3b82f6;
+}
+
+body[data-theme="light"] {
+  --bg-main: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-input: #f8fafc;
+  --border-color: #e2e8f0;
+  --dark-titr-color: #0f172a;
+  --dark-text-color: #64748b;
+  --dark-buttons-color: #2563eb;
+  --green-badge: #059669;
+  --high-priority: #dc2626;
+  --medium-priority: #d97706;
+  --low-priority: #2563eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--dark-titr-color);
+  font-family: "Inter", "Vazirmatn", sans-serif;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] input,
+html[dir="rtl"] button,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea {
+  font-family: "Vazirmatn", sans-serif !important;
+}
+
+.appLayout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}

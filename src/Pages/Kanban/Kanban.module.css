@@ -1,0 +1,265 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.mainArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content {
+  padding: 28px 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pageTitle h1 {
+  color: var(--dark-titr-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.pageTitle p {
+  color: var(--dark-text-color);
+  font-size: 0.9rem;
+}
+
+.addTaskBtn {
+  background-color: var(--dark-buttons-color);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.addTaskBtn:hover {
+  background-color: #1d4ed8;
+}
+
+.boardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.column {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 500px;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.columnTitleArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.purple { background-color: #a855f7; }
+.blue { background-color: #3b82f6; }
+.amber { background-color: #f59e0b; }
+.green { background-color: #10b981; }
+
+.columnHeader h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.98rem;
+  color: var(--dark-titr-color);
+}
+
+.countBadge {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--dark-text-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.columnMenuBtn {
+  background: transparent;
+  border: none;
+  color: var(--dark-text-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.columnMenuBtn:hover {
+  color: var(--dark-titr-color);
+}
+
+.columnCardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emptyColumn {
+  text-align: center;
+  padding: 30px 10px;
+  color: var(--dark-text-color);
+  font-size: 0.85rem;
+}
+
+.taskCard {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.25s all;
+}
+
+.taskCard:hover {
+  border-color: var(--dark-buttons-color);
+  transform: translateY(-2px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectTag {
+  color: var(--dark-text-color);
+  font-size: 0.75rem;
+}
+
+.taskCard h4 {
+  color: var(--dark-titr-color);
+  font-family: "Inter", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.completedTitle {
+  text-decoration: line-through;
+  color: var(--dark-text-color);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.footerInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--dark-text-color);
+  font-size: 0.76rem;
+}
+
+.clockIcon {
+  font-size: 0.8rem;
+}
+
+.avatarsGroup {
+  display: flex;
+  align-items: center;
+}
+
+.miniAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--dark-buttons-color);
+  border: 2px solid var(--bg-input);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -5px;
+}
+
+.miniAvatar:first-child {
+  margin-left: 0;
+}
+
+.highBadge,
+.mediumBadge,
+.lowBadge {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.highBadge {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+.mediumBadge {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.lowBadge {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+}
+
+@media (max-width: 1200px) {
+  .boardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .boardGrid {
+    grid-template-columns: 1fr;
+  }
+}

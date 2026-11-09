@@ -1,0 +1,207 @@
+.tourOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: auto;
+}
+.spotlightBox {
+  position: fixed;
+  border-radius: 12px;
+  border: 2px solid #3b82f6;
+  box-shadow:
+    0 0 0 9999px rgba(8, 13, 26, 0.72),
+    0 0 25px rgba(59, 130, 246, 0.85);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+  z-index: 1000;
+  animation: pulseBorder 1.8s infinite;
+}
+
+@keyframes pulseBorder {
+  0% {
+    border-color: #3b82f6;
+  }
+  50% {
+    border-color: #22d3ee;
+  }
+  100% {
+    border-color: #3b82f6;
+  }
+}
+
+.pointerBadge {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6);
+  animation: bouncePointer 1s infinite alternate;
+}
+
+@keyframes bouncePointer {
+  from {
+    transform: translate(-50%, 0);
+  }
+  to {
+    transform: translate(-50%, -7px);
+  }
+}
+
+.tooltipCard {
+  position: fixed;
+  width: 350px;
+  max-width: calc(100vw - 32px);
+  background-color: var(--bg-card);
+  border: 1px solid #3b82f6;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge {
+  background-color: rgba(37, 99, 235, 0.16);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skipIconBtn {
+  background: transparent;
+  border: none;
+  color: var(--dark-text-color);
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.skipIconBtn:hover {
+  color: var(--dark-titr-color);
+}
+
+.stepTitle {
+  color: var(--dark-titr-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.06rem;
+  font-weight: 700;
+}
+
+.stepDesc {
+  color: var(--dark-text-color);
+  font-size: 0.87rem;
+  line-height: 1.6;
+}
+
+.dotsRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.activeDot,
+.inactiveDot {
+  height: 6px;
+  border-radius: 10px;
+  transition: 0.25s all;
+}
+
+.activeDot {
+  width: 22px;
+  background-color: #3b82f6;
+}
+
+.inactiveDot {
+  width: 6px;
+  background-color: var(--border-color);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.skipTextBtn {
+  background: transparent;
+  border: none;
+  color: var(--dark-text-color);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.skipTextBtn:hover {
+  color: #f87171;
+}
+
+.navBtns {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.prevBtn,
+.nextBtn {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.prevBtn {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--dark-titr-color);
+}
+
+.prevBtn:hover {
+  border-color: #3b82f6;
+}
+
+.nextBtn {
+  background-color: var(--dark-buttons-color);
+  border: none;
+  color: #fff;
+}
+
+.nextBtn:hover {
+  background-color: #1d4ed8;
+}
